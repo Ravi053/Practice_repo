@@ -18,40 +18,5 @@ pipeline {
         '''
       }
     }
-    stage('parallel') {
-      parallel {
-        stage('slave1') {
-          agent {label 'label1'}
-          steps {
-            echo "$NAME"
-            sh '''
-            sleep 3
-            '''
-          }
-        }
-        stage('slave2') {
-          agent {label 'label1'}
-          steps {
-            echo "this is slave2"
-            sh '''
-            sleep 3
-            '''
-          }
-        }
-      }
-    }
-    stage('Deploy') {
-        agent any;
-        steps {
-          echo "this is deploy stage"
-          sh '''
-          sleep 3
-          '''
-        }
-      }
-    }
   }
-
-
-    
-  
+}
