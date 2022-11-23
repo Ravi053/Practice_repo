@@ -32,7 +32,7 @@ pipeline {
         }
       }
     }
-    stages {
+    stage {
       stage('Deploy') {
         agent any;
         steps {
