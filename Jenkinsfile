@@ -8,7 +8,6 @@ pipeline {
     DEPLOY_BRANCH = "$Branch"
     DEPLOY_ENV = "$ENV"
   }
-  
   stage('build') {
     steps {
       echo "deploying to ${params.Branch}"
