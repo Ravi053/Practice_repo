@@ -1,5 +1,5 @@
 pipeline {
-  agent none;
+  agent any;
   parameters {
   string defaultValue: 'test', description: 'deploying to ENV', name: 'ENV', trim: true
      choice choices: ['test'], description: 'deploying to Branch', name: 'Branch'
