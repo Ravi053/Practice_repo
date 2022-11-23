@@ -2,7 +2,7 @@ pipeline {
   agent any;
   parameters {
   choice choices: ['QA'], description: 'deploying to Branch', name: 'Branch'
-    string defaultValue: 'UAT', description: 'deploy to UAT', name: 'ENV', trim: true
+  string defaultValue: 'UAT', description: 'deploy to UAT', name: 'ENV', trim: true
 }
   environment {
     DEPLOY_BRANCH = "$Branch"
