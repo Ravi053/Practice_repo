@@ -10,7 +10,7 @@ pipeline {
         '''
       }
     }
-    stage('test') {
+    stages {
       parallel {
         stage('slave1') {
           agent {label 'label1'}
@@ -32,8 +32,7 @@ pipeline {
         }
       }
     }
-    stage {
-      stage('Deploy') {
+    stage('Deploy') {
         agent any;
         steps {
           echo "this is deploy stage"
