@@ -9,7 +9,7 @@ pipeline {
         '''
       }
     }
-    stage('test parallel')
+    stage('test parallel') {
     parallel {
       stage('product1') {
         steps {
@@ -35,4 +35,5 @@ pipeline {
     }
   }
 }
+
 
