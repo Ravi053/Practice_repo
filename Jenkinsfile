@@ -39,7 +39,7 @@ pipeline {
   }
   stage('production') {
     parallel {
-      stage('production1) {
+      stage('production1') {
             steps {
               echo "this is production1"
               sh '''
