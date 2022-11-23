@@ -1,13 +1,18 @@
 pipeline {
   agent none;
+  parameters {
+  string defaultValue: 'test', description: 'deploying to ENV', name: 'ENV', trim: true
+     choice choices: ['test'], description: 'deploying to Branch', name: 'Branch'
+}
   environment {
-    NAME = 'Ravi S'
+    DEPLOY BRANCH="${Branch}"
+    DEPLOY ENV="${ENV}"
   }
   stages {
     stage('Build') {
-      agent {label 'master'}
       steps {
-        echo "$NAME"
+        echo "deploying to ${params.Branch}"
+        echo "deploying to ${params.ENV}"
         sh '''
         sleep 3
         '''
