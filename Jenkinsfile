@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo "this is to test buid timezone"
         sh '''
-        systemctldate
+        timedatectl
         '''
       }
     }
