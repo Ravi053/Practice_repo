@@ -1,10 +1,13 @@
 pipeline {
   agent none;
+  environment {
+    NAME = 'Ravi S'
+  }
   stages {
     stage('Build') {
       agent {label 'master'}
       steps {
-        echo "this is stage1"
+        echo "$NAME"
         sh '''
         sleep 3
         '''
