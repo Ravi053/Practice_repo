@@ -38,11 +38,24 @@ pipeline {
     }
   }
   stage('production') {
-    steps {
-      echo "this is production stage"
-    }
-  }
-}
-}
+    parallel {
+      stage('production1) {
+            steps {
+              echo "this is production1"
+              sh '''
+              sleep 3
+              '''
+            }
+            }
+            stage('production2') {
+              steps {
+                echo "this is production2"
+                sh '''
+                sleep 3
+                '''
+              }
+            }
+            }
+            }
 
 
