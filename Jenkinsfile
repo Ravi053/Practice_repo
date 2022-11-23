@@ -4,7 +4,7 @@ pipeline {
   choice choices: ['QA'], description: 'deploying to Branch', name: 'Branch'
     string defaultValue: 'UAT', description: 'deploy to UAT', name: 'ENV', trim: true
 }
-  environmet {
+  environment {
     DEPLOY_BRANCH = "$Branch"
     DEPLOY_ENV = "$ENV"
   }
