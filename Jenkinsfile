@@ -18,7 +18,7 @@ pipeline {
         stage('slave1') {
           agent {label 'label1'}
           steps {
-            echo "this is slave1"
+            echo "$NAME"
             sh '''
             sleep 3
             '''
