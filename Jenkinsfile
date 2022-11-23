@@ -27,6 +27,14 @@ pipeline {
           '''
         }
       }
+      stage('product3') {
+        steps {
+          echo "this is product3"
+          sh '''
+          sleep 3
+          '''
+        }
+      }
     }
   }
   stage('production') {
