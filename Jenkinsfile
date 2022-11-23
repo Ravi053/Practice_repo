@@ -5,8 +5,8 @@ pipeline {
      choice choices: ['test'], description: 'deploying to Branch', name: 'Branch'
 }
   environment {
-    DEPLOY BRANCH="${Branch}"
-    DEPLOY ENV="${ENV}"
+    DEPLOY BRANCH = "${Branch}"
+    DEPLOY ENV = "${ENV}"
   }
   stages {
     stage('Build') {
