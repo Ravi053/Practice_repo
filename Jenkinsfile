@@ -10,7 +10,7 @@ pipeline {
         '''
       }
     }
-    stages('test') {
+    stage('test') {
       parallel {
         stage('slave1') {
           agent {label 'label1'}
